@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Bitwarden
+Comment=Secure password manager.
+Exec=bitwarden %U
+Icon=com.bitwarden.desktop
+Terminal=false
+Type=Application
+Categories=Utility;Security;
+

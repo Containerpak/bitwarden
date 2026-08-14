@@ -46,6 +46,7 @@ jobs:
           file: Containerfile
           platforms: linux/amd64
           push: true
+          pull: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
@@ -60,4 +61,3 @@ jobs:
 
       - name: Publish summary
         run: echo "ghcr.io/containerpak/bitwarden@${{ steps.build.outputs.digest }}" >> "$GITHUB_STEP_SUMMARY"
-

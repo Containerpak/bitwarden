@@ -3,7 +3,7 @@
   "manifest_version": "2.0",
   "name": "Bitwarden",
   "description": "Secure password manager.",
-  "version": "2026.7.0",
+  "version": "2026.8.0",
   "image": "ghcr.io/containerpak/bitwarden:main",
   "binaries": ["/usr/bin/bitwarden"],
   "desktop_entries": ["/usr/share/applications/com.bitwarden.desktop.desktop"],

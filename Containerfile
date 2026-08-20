@@ -1,14 +1,14 @@
 FROM ubuntu:26.04 AS source
 
-ARG APP_SHA256=df956ee0abf75c122ff3a68b815f75514a28eb396ef8bebf5c6d71b00ffa908a
+ARG APP_SHA256=39fa0e8ea86369286b5062e23e362dd884b104448ba09a484ef58a3d37af4dfa
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends ca-certificates curl squashfs-tools && \
-    curl --fail --location --output /tmp/Bitwarden-2026.7.0-x86_64.AppImage "https://github.com/bitwarden/clients/releases/download/desktop-v2026.7.0/Bitwarden-2026.7.0-x86_64.AppImage" && \
-    echo "${APP_SHA256}  /tmp/Bitwarden-2026.7.0-x86_64.AppImage" | sha256sum --check && \
-    chmod 0755 /tmp/Bitwarden-2026.7.0-x86_64.AppImage && \
+    curl --fail --location --output /tmp/Bitwarden-2026.8.0-x86_64.AppImage "https://github.com/bitwarden/clients/releases/download/desktop-v2026.8.0/Bitwarden-2026.8.0-x86_64.AppImage" && \
+    echo "${APP_SHA256}  /tmp/Bitwarden-2026.8.0-x86_64.AppImage" | sha256sum --check && \
+    chmod 0755 /tmp/Bitwarden-2026.8.0-x86_64.AppImage && \
     cd /tmp && \
-    ./Bitwarden-2026.7.0-x86_64.AppImage --appimage-extract >/dev/null && \
+    ./Bitwarden-2026.8.0-x86_64.AppImage --appimage-extract >/dev/null && \
     mv /tmp/squashfs-root /out
 
 FROM ghcr.io/containerpak/gtk3:main

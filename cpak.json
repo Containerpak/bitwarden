@@ -4,7 +4,7 @@
   "name": "Bitwarden",
   "description": "Secure password manager.",
   "version": "2026.8.0",
-  "image": "ghcr.io/containerpak/bitwarden@sha256:3a1b1e8cbbfb5d5f3633481efb5a97b283f2ca0fce21871793100b20b906c141",
+  "image": "ghcr.io/containerpak/bitwarden@sha256:38b342122e0a654a34b6defcb4181f1567866d8b97f9002d96a965beb8223b95",
   "binaries": [
     "/usr/bin/bitwarden"
   ],
